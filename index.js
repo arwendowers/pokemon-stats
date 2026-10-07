@@ -40,6 +40,12 @@ form.onsubmit = function(e) {
   var searchTerm = this.pokemonName.value.trim()
   if (!searchTerm) return
 
+  var displayName = searchTerm
+
+  if (searchTerm.toLowerCase() === 'twix') {
+    searchTerm = 'umbreon'
+  }
+
   form.pokemonName.value = ""
 
   fetch(URL + searchTerm)
@@ -49,17 +55,19 @@ form.onsubmit = function(e) {
     }
     return res.json()
   })
-  .then(getPokemonData)
+  .then(function(pokemon) {
+    getPokemonData(pokemon, displayName)
+  })
   .catch(function(err) {
     pokemonDiv.innerHTML = err.message
   })
 }
 
-function getPokemonData(pokemon) {
+function getPokemonData(pokemon, displayName) {
   pokemonDiv.innerHTML = ''
 
   var name = document.createElement('h2')
-  name.textContent = pokemon.name.toLowerCase() + ' :3'
+  name.textContent = displayName.toLowerCase() + ' :3'
   pokemonDiv.appendChild(name)
 
   var sprite = document.createElement('img')
