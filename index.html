@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemon App</title>
+  <style>
+    body {
+      text-align: center;
+      color: white;
+      /* background-color: rgb(38, 116, 233); */
+      background: linear-gradient(to bottom, rgb(38, 145, 233), rgb(103, 38, 233));
+      min-height: 100vh;
+      margin: 0;
+      font-family:  Helvetica, sans-serif
+    }
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+    img {
+      display: block;
+      margin: auto;
+    }
+    #pokemon > * {
+      margin: 6px auto;
+    }
+    #pokemon:not(:empty) {
+      color: black;
+      background-color: white;
+      border: 3px solid rgb(32, 29, 186);
+      border-radius: 15px;
+      padding: 20px;
+      width: 250px;
+      margin: auto;
+    }
+    .normal {
+      color: white;
+      background-color: #A8A77A;
+    }
+    .fire {
+      color: white;
+      background-color: #EE8130;
+    }
+    .water {
+      color: white;
+      background-color: #6390F0;
+    }
+    .grass {
+      color: white;
+      background-color: #7AC74C;
+    }
+    .electric {
+      color: white;
+      background-color: #F7D02C;
+    }
+    .ice {
+      color: white;
+      background-color: #96D9D6;
+    }
+    .fighting {
+      color: white;
+      background-color: #C22E28;
+    }
+    .poison {
+      color: white;
+      background-color: #A33EA1;
+    }
+    .ground {
+      color: white;
+      background-color: #E2BF65;
+    }
+    .flying {
+      color: white;
+      background-color: #A98FF3;
+    }
+    .psychic {
+      color: white;
+      background-color: #F95587;
+    }
+    .bug {
+      color: white;
+      background-color: #A6B91A;
+    }
+    .rock {
+      color: white;
+      background-color: #B6A136;
+    }
+    .ghost {
+      color: white;
+      background-color: #735797;
+    }
+    .dragon {
+      color: white;
+      background-color: #6F35FC;
+    }
+    .dark {
+      color: white;
+      background-color: #705746;
+    }
+    .steel {
+      color: white;
+      background-color: #B7B7CE;
+    }
+    .fairy {
+      color: white;
+      background-color: #D685AD;
+    }
+    .type {
+      padding: 2px 6px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <h1>pokemon stats!</h1>
+  <!-- <p>(for forms, use dashes between words (like maushold-family-of-three))</p> -->
+  <form>
+    <label for="pokemonName">enter a pokemon name:&nbsp;</label>
+    <input type="text" name="pokemonName" id="pokemonName">
+    <button type="submit">Submit</button>
+  </form>
+  <div id="pokemon"></div>
+  <script src="index.js"></script>
+  <!-- <script src="tests.js"></script> -->
+</body>
+</html>
